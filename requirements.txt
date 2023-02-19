@@ -1,5 +1,5 @@
 streamlit
 pandas
 numpy
-!pip install rpa
+https://github.com/tebelorg/RPA-Python.git
 rpa
