@@ -36,8 +36,8 @@ def run():
 
         r.snap('/html/body/app-root/div[2]','results.png')
         
-
-        image = Image.open('results.png')
+        img=current_dir / 'results.png'
+        image = Image.open(img)
 
         st.image(image, caption='Sunrise by the mountains')
 
