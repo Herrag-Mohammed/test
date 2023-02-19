@@ -2,10 +2,13 @@
 import rpa as r
 import pandas as pd
 import streamlit as st
+from pathlib import Path
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+file = current_dir / "challenge.xlsx"
 #read the excel file and store in dataframe variable df
 def run():
     if st.button('Run >'):
-        df= pd.read_excel('challenge.xlsx')
+        df= pd.read_excel(file)
 
         #start the tagUI process
         r.init()
