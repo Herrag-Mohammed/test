@@ -8,7 +8,7 @@ file = current_dir / "../challenge.xlsx"
 #read the excel file and store in dataframe variable df
 def run():
     if st.button('Run >'):
-        df= pd.read_excel("../challenge.xlsx")
+        df= pd.read_excel("./challenge.xlsx")
 
         #start the tagUI process
         r.init()
