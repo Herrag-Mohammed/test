@@ -3,6 +3,7 @@ import rpa as r
 import pandas as pd
 import streamlit as st
 from pathlib import Path
+from PIL import Image
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 file = current_dir / "../challenge.xlsx"
 #read the excel file and store in dataframe variable df
@@ -34,6 +35,11 @@ def run():
         #screenshot of webpage
 
         r.snap('/html/body/app-root/div[2]','results.png')
+        
+
+        image = Image.open('results.png')
+
+        st.image(image, caption='Sunrise by the mountains')
 
         #stop the tagui process
         r.close()
