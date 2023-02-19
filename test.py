@@ -4,11 +4,11 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-file = current_dir / "challenge.xlsx"
+file = current_dir / "../challenge.xlsx"
 #read the excel file and store in dataframe variable df
 def run():
     if st.button('Run >'):
-        df= pd.read_excel(file)
+        df= pd.read_excel("../challenge.xlsx")
 
         #start the tagUI process
         r.init()
